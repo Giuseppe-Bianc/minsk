@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Minsk.CodeAnalysis {
+namespace Minsk.CodeAnalysis.Syntax {
 	internal static class SyntaxFact {
 		public static int GetBinaryOperatorPrecedence(this SyntaxKind kind) {
 			switch (kind) {

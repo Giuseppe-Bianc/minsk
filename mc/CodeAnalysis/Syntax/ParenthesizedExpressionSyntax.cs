@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 
-namespace Minsk.CodeAnalysis {
+namespace Minsk.CodeAnalysis.Syntax {
 	public sealed class ParenthesizedExpressionSyntax : ExpressionSyntax {
-		public ParenthesizedExpressionSyntax(SyntaxToken openParenthesisToken, ExpressionSyntax expression, SyntaxToken closeParenthesisToken)
-		{
+		public ParenthesizedExpressionSyntax(SyntaxToken openParenthesisToken, ExpressionSyntax expression, SyntaxToken closeParenthesisToken) {
 			OpenParenthesisToken = openParenthesisToken;
 			Expression = expression;
 			CloseParenthesisToken = closeParenthesisToken;
@@ -14,8 +13,7 @@ namespace Minsk.CodeAnalysis {
 		public ExpressionSyntax Expression { get; }
 		public SyntaxToken CloseParenthesisToken { get; }
 
-		public override IEnumerable<SyntaxNode> GetChildren()
-		{
+		public override IEnumerable<SyntaxNode> GetChildren(){
 			yield return OpenParenthesisToken;
 			yield return Expression;
 			yield return CloseParenthesisToken;

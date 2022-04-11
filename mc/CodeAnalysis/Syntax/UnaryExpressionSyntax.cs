@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Minsk.CodeAnalysis {
-	public sealed class UnaryExpressionSyntax : ExpressionSyntax
-	{
-		public UnaryExpressionSyntax(SyntaxToken operatorToken, ExpressionSyntax operand)
-		{
+namespace Minsk.CodeAnalysis.Syntax {
+	public sealed class UnaryExpressionSyntax : ExpressionSyntax {
+		public UnaryExpressionSyntax(SyntaxToken operatorToken, ExpressionSyntax operand) {
 			OperatorToken = operatorToken;
 			Operand = operand;
 		}
@@ -17,8 +13,7 @@ namespace Minsk.CodeAnalysis {
 		public SyntaxToken OperatorToken { get; }
 		public ExpressionSyntax Operand { get; }
 
-		public override IEnumerable<SyntaxNode> GetChildren()
-		{
+		public override IEnumerable<SyntaxNode> GetChildren() {
 			yield return OperatorToken;
 			yield return Operand;
 		}

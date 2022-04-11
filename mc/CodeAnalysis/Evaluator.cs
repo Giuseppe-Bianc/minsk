@@ -1,11 +1,12 @@
 ﻿using System;
+using Minsk.CodeAnalysis.Syntax;
 
 namespace Minsk.CodeAnalysis {
 	public sealed class Evaluator {
 		private readonly ExpressionSyntax _root;
 
 		public Evaluator(ExpressionSyntax root){
-			this._root = root;
+			_root = root;
 		}
 
 		public int Evaluate(){

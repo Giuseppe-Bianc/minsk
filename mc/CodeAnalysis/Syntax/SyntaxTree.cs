@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Minsk.CodeAnalysis {
+namespace Minsk.CodeAnalysis.Syntax {
 	public sealed class SyntaxTree {
-		public SyntaxTree(IEnumerable<string> diagnostics, ExpressionSyntax root, SyntaxToken endOfFileToken)
-		{
+		public SyntaxTree(IEnumerable<string> diagnostics, ExpressionSyntax root, SyntaxToken endOfFileToken) {
 			Diagnostics = diagnostics.ToArray();
 			Root = root;
 			EndOfFileToken = endOfFileToken;
